@@ -78,6 +78,148 @@ html,body{
     }
 }
 
+.view2{
+    width: 100%;
+    @include flexBox(4rem);
+    flex-direction: column;
+    padding: 5rem 2rem;
+
+    .card{
+        border-top: 4px solid rgba(128, 128, 128, 0.3);
+        width: 100%;
+        @include flexBox(5rem);
+        flex-direction: column;
+        padding-top: 2rem;
+
+        .card-paragraph{
+            @include flexBox(1rem);
+            flex-direction: column;
+
+            h3{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+        }
+        .card-image{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.view3{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: column;
+    padding: 2rem;
+    .view3-main{
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: column;
+        .view3-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .view3-info{
+            width: 100%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view3-heading{
+                @include flexBox(1rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 2rem;
+                }
+            }
+            .view3-paragraph{
+                @include flexBox(3rem);
+                flex-direction: column;
+                font-size: 1.5rem;
+                .view3-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        border: 1px solid blue;
+                        color: blue;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+.view4{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: column;
+    padding: 2rem;
+    background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+    .view4-main{
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: column;
+        .view4-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .view4-info{
+            width: 100%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view4-heading{
+                @include flexBox(1rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 2rem;
+                }
+            }
+            .view4-paragraph{
+                @include flexBox(3rem);
+                flex-direction: column;
+                font-size: 1.5rem;
+                .view4-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: rgb(76, 159, 255);
+                        color: white;
+                        border:none;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:1092px) {
     .nav{
      .navbar{
@@ -111,6 +253,171 @@ html,body{
         }
         h1{
             text-align: start;
+            font-size: 3rem;
+            width: 30%;
+            line-height: 50px;
+        }
+    }
+    .view1-paragraph{
+        display: flex;
+        justify-content: center;
+        h2{
+            width: 50%;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
+    .view2{
+    width: 80%;
+    margin: auto;
+    @include flexBox(4rem);
+    flex-direction: row;
+    padding: 5rem 2rem;
+}
+    .view3{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    .view3-main{
+        width: 80%;
+        @include flexBox(10rem);
+        flex-direction: row-reverse;
+        align-items: center;
+        .view3-img{
+            width: 50%;
+            img{
+                width: 80%;
+            }
+        }
+        .view3-info{
+            width: 45%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view3-heading{
+                @include flexBox(0.5rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    
+                }
+                h3{
+                    font-size: 3rem;
+                }
+            }
+            .view3-paragraph{
+                @include flexBox(3rem);
+                flex-direction: column;
+                font-size: 1.2rem;
+                .view3-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        border: 1px solid blue;
+                        color: blue;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+    .view4{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    .view4-main{
+        width: 80%;
+        @include flexBox(5rem);
+        flex-direction: row;
+        align-items: center;
+        .view4-img{
+            width: 50%;
+            img{
+                width: 80%;
+            }
+        }
+        .view4-info{
+            width: 40%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view4-heading{
+                @include flexBox(0.5rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    
+                }
+                h3{
+                    font-size: 3.5rem;
+                    line-height: 4rem
+                }
+            }
+            .view4-paragraph{
+                @include flexBox(2rem);
+                flex-direction: column;
+                font-size: 1.2rem;
+                .view4-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: rgb(76, 159, 255);
+                        color: white;
+                        border:none;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
+
+@media (min-width:1013px) {
+     .view1{
+    width: 100%;
+    padding: 2rem;
+    @include flexBox(5rem);
+    
+    
+    background: linear-gradient(
+    to top right,
+    rgba(255, 69, 69, 0.327) 10%,
+    white 40%,
+    white 100%
+);
+    .view1-heading{
+        @include flexBox(3rem);
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 35%;
+        }
+        h1{
+            text-align: start;
             font-size: 4rem;
             width: 30%;
             line-height: 70px;
@@ -121,7 +428,7 @@ html,body{
         justify-content: center;
         h2{
             width: 50%;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 500;
         }
     }

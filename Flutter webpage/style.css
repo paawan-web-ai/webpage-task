@@ -73,12 +73,367 @@ html, body {
   font-weight: 500;
 }
 
+.view2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  flex-direction: column;
+  padding: 5rem 2rem;
+}
+.view2 .card {
+  border-top: 4px solid rgba(128, 128, 128, 0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.view2 .card .card-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: column;
+}
+.view2 .card .card-paragraph h3 {
+  font-size: 2rem;
+}
+.view2 .card .card-paragraph p {
+  font-size: 1.3rem;
+}
+.view2 .card .card-image {
+  width: 100%;
+}
+.view2 .card .card-image img {
+  width: 100%;
+}
+
+.view3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+.view3 .view3-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+}
+.view3 .view3-main .view3-img {
+  width: 100%;
+}
+.view3 .view3-main .view3-img img {
+  width: 100%;
+}
+.view3 .view3-main .view3-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: column;
+}
+.view3 .view3-main .view3-info .view3-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: column;
+}
+.view3 .view3-main .view3-info .view3-heading p {
+  font-size: 1.5rem;
+}
+.view3 .view3-main .view3-info .view3-heading h3 {
+  font-size: 2rem;
+}
+.view3 .view3-main .view3-info .view3-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.view3 .view3-main .view3-info .view3-paragraph .view3-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.view3 .view3-main .view3-info .view3-paragraph .view3-btn button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid blue;
+  color: blue;
+  border-radius: 2rem;
+}
+.view3 .view3-main .view3-info .view3-paragraph .view3-btn p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.view4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+  padding: 2rem;
+  background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+}
+.view4 .view4-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+}
+.view4 .view4-main .view4-img {
+  width: 100%;
+}
+.view4 .view4-main .view4-img img {
+  width: 100%;
+}
+.view4 .view4-main .view4-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: column;
+}
+.view4 .view4-main .view4-info .view4-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: column;
+}
+.view4 .view4-main .view4-info .view4-heading p {
+  font-size: 1.5rem;
+}
+.view4 .view4-main .view4-info .view4-heading h3 {
+  font-size: 2rem;
+}
+.view4 .view4-main .view4-info .view4-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.view4 .view4-main .view4-info .view4-paragraph .view4-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.view4 .view4-main .view4-info .view4-paragraph .view4-btn button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: rgb(76, 159, 255);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+.view4 .view4-main .view4-info .view4-paragraph .view4-btn p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 @media (max-width: 1092px) {
   .nav .navbar .nav-options {
     display: none;
   }
 }
 @media (min-width: 900px) {
+  .view1 {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background: linear-gradient(to top right, rgba(255, 69, 69, 0.327) 10%, white 40%, white 100%);
+  }
+  .view1 .view1-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .view1 .view1-heading img {
+    width: 35%;
+  }
+  .view1 .view1-heading h1 {
+    text-align: start;
+    font-size: 3rem;
+    width: 30%;
+    line-height: 50px;
+  }
+  .view1 .view1-paragraph {
+    display: flex;
+    justify-content: center;
+  }
+  .view1 .view1-paragraph h2 {
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .view2 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex-direction: row;
+    padding: 5rem 2rem;
+  }
+  .view3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+  }
+  .view3 .view3-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .view3 .view3-main .view3-img {
+    width: 50%;
+  }
+  .view3 .view3-main .view3-img img {
+    width: 80%;
+  }
+  .view3 .view3-main .view3-info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .view3 .view3-main .view3-info .view3-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .view3 .view3-main .view3-info .view3-heading p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .view3 .view3-main .view3-info .view3-heading h3 {
+    font-size: 3rem;
+  }
+  .view3 .view3-main .view3-info .view3-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .view3 .view3-main .view3-info .view3-paragraph .view3-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view3 .view3-main .view3-info .view3-paragraph .view3-btn button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 2rem;
+  }
+  .view3 .view3-main .view3-info .view3-paragraph .view3-btn p {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .view4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+  }
+  .view4 .view4-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view4 .view4-main .view4-img {
+    width: 50%;
+  }
+  .view4 .view4-main .view4-img img {
+    width: 80%;
+  }
+  .view4 .view4-main .view4-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .view4 .view4-main .view4-info .view4-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .view4 .view4-main .view4-info .view4-heading p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .view4 .view4-main .view4-info .view4-heading h3 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .view4 .view4-main .view4-info .view4-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .view4 .view4-main .view4-info .view4-paragraph .view4-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view4 .view4-main .view4-info .view4-paragraph .view4-btn button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: rgb(76, 159, 255);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+  }
+  .view4 .view4-main .view4-info .view4-paragraph .view4-btn p {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1013px) {
   .view1 {
     width: 100%;
     padding: 2rem;
@@ -110,7 +465,7 @@ html, body {
   }
   .view1 .view1-paragraph h2 {
     width: 50%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 }/*# sourceMappingURL=style.css.map */
