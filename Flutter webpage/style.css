@@ -394,7 +394,39 @@ html, body {
 }
 .view7 .blue-box {
   color: white;
+  width: 70%;
   background-color: rgb(0, 0, 78);
+  background-image: url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png");
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.view7 .blue-box h1 {
+  font-size: 3.5rem;
+}
+.view7 .blue-box p {
+  font-size: 1.5rem;
+}
+.view7 .blue-box .blue-btn {
+  display: flex;
+  padding: 1rem;
+  gap: 3rem;
+  align-items: center;
+}
+.view7 .blue-box .blue-btn button {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  color: blue;
+}
+.view7 .blue-box .blue-btn p {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 @media (max-width: 1092px) {
@@ -725,6 +757,51 @@ html, body {
   .view6 .view6-main .view6-info .view6-paragraph .view6-btn p {
     font-size: 1rem;
     font-weight: 700;
+  }
+  .view7 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  .view7 .blue-box {
+    color: white;
+    width: 70%;
+    background-color: rgb(0, 0, 78);
+    background-image: url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png");
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .view7 .blue-box h1 {
+    font-size: 3.5rem;
+  }
+  .view7 .blue-box p {
+    font-size: 1.2rem;
+  }
+  .view7 .blue-box .blue-btn {
+    display: flex;
+    padding: 1rem;
+    gap: 3rem;
+    align-items: center;
+  }
+  .view7 .blue-box .blue-btn button {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    color: blue;
+  }
+  .view7 .blue-box .blue-btn p {
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 }
 @media (min-width: 1013px) {
