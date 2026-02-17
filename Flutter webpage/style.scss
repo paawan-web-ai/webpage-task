@@ -1,28 +1,93 @@
-*{
+* {
     margin: 0%;
-    padding:0%;
+    padding: 0%;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@mixin flexBox($gap:0rem){
+@mixin flexBox($gap: 0rem) {
     display: flex;
     flex-direction: column;
     gap: $gap;
 }
 
+.menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.nav{
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.menu svg {
+    width: 50px;
+    /* reduce size */
+    height: 50px;
+}
+
+@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+.nav {
     width: 100%;
     display: flex;
 
-    .navbar{
+    .navbar {
         width: 100%;
         @include flexBox(0rem);
         justify-content: space-between;
@@ -30,16 +95,18 @@ html,body{
         align-items: center;
         padding: 1rem 2rem;
 
-        .nav-options{
+        .nav-options {
             @include flexBox(2rem);
             flex-direction: row;
             font-size: 1.1rem;
             font-weight: 600;
             align-items: center;
-            i{
+
+            i {
                 font-size: 1.4rem;
             }
-            button{
+
+            button {
                 padding: 0.9rem 2rem;
                 background-color: rgb(9, 9, 188);
                 border-radius: 50px;
@@ -48,116 +115,171 @@ html,body{
                 border: none;
             }
         }
+
+        .nav-options-nav {
+            display: none;
+        }
+        
+        .nav-options-nav.show {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .nav-options-nav {
+            
+            flex-direction: column;
+            gap: 1.2rem;
+            text-align: center;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 100%;
+            align-items: center;
+
+            font-size: 2rem;
+   
+            background: white;
+            padding: 2rem;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 0 0 1rem 1rem;
+            z-index: 99;
+            animation: slideDown 0.3s ease forwards;
+            button{
+                font-size: 2rem;
+                width: fit-content;
+                padding: 0.6rem 2rem;
+            }
+        }
+
     }
 
 }
 
-.view1{
+.view1 {
     width: 100%;
     padding: 2rem;
     @include flexBox(5rem);
-    background: linear-gradient(
-        white 0%,
-        white 50%,
-        red 250%
-    );
-    .view1-heading{
+    background: linear-gradient(white 0%,
+            white 50%,
+            red 250%);
+
+    .view1-heading {
         @include flexBox(2rem);
-        img{
+
+        img {
             width: 100%;
         }
-        h1{
+
+        h1 {
             text-align: center;
             font-size: 3rem;
         }
     }
-    .view1-paragraph{
+
+    .view1-paragraph {
         text-align: center;
-        h2{
+
+        h2 {
             font-size: 2rem;
             font-weight: 500;
         }
     }
 }
 
-.view2{
+.view2 {
     width: 100%;
     @include flexBox(4rem);
     flex-direction: column;
     padding: 5rem 2rem;
 
-    .card{
+    .card {
         border-top: 4px solid rgba(128, 128, 128, 0.3);
         width: 100%;
         @include flexBox(5rem);
         flex-direction: column;
         padding-top: 2rem;
 
-        .card-paragraph{
+        .card-paragraph {
             @include flexBox(1rem);
             flex-direction: column;
 
-            h3{
+            h3 {
                 font-size: 2rem;
             }
-            p{
+
+            p {
                 font-size: 1.3rem;
             }
         }
-        .card-image{
+
+        .card-image {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
     }
 }
-.view3{
+
+.view3 {
     width: 100%;
     @include flexBox(0rem);
     flex-direction: column;
     padding: 2rem;
-    .view3-main{
+
+    .view3-main {
         width: 100%;
         @include flexBox(0rem);
         flex-direction: column;
-        .view3-img{
+
+        .view3-img {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
-        .view3-info{
+
+        .view3-info {
             width: 100%;
             @include flexBox(2rem);
             flex-direction: column;
-            .view3-heading{
+
+            .view3-heading {
                 @include flexBox(1rem);
                 flex-direction: column;
-                p{
+
+                p {
                     font-size: 1.5rem;
                 }
-                h3{
+
+                h3 {
                     font-size: 2rem;
                 }
             }
-            .view3-paragraph{
+
+            .view3-paragraph {
                 @include flexBox(3rem);
                 flex-direction: column;
                 font-size: 1.5rem;
-                .view3-btn{
+
+                .view3-btn {
                     @include flexBox(2rem);
                     flex-direction: row;
                     align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
+
+                    button {
+                        padding: 0.8rem 2rem;
                         font-size: 1rem;
                         background-color: transparent;
                         border: 1px solid blue;
                         color: blue;
                         border-radius: 2rem;
                     }
-                    p{
+
+                    p {
                         font-size: 1.2rem;
                         font-weight: 700;
                     }
@@ -166,53 +288,65 @@ html,body{
         }
     }
 }
-.view4{
+
+.view4 {
     width: 100%;
     @include flexBox(0rem);
     flex-direction: column;
     padding: 2rem;
     background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
-    .view4-main{
+
+    .view4-main {
         width: 100%;
         @include flexBox(0rem);
         flex-direction: column;
-        .view4-img{
+
+        .view4-img {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
-        .view4-info{
+
+        .view4-info {
             width: 100%;
             @include flexBox(2rem);
             flex-direction: column;
-            .view4-heading{
+
+            .view4-heading {
                 @include flexBox(1rem);
                 flex-direction: column;
-                p{
+
+                p {
                     font-size: 1.5rem;
                 }
-                h3{
+
+                h3 {
                     font-size: 2rem;
                 }
             }
-            .view4-paragraph{
+
+            .view4-paragraph {
                 @include flexBox(3rem);
                 flex-direction: column;
                 font-size: 1.5rem;
-                .view4-btn{
+
+                .view4-btn {
                     @include flexBox(2rem);
                     flex-direction: row;
                     align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
+
+                    button {
+                        padding: 0.8rem 2rem;
                         font-size: 1rem;
                         background-color: rgb(76, 159, 255);
                         color: white;
-                        border:none;
+                        border: none;
                         border-radius: 2rem;
                     }
-                    p{
+
+                    p {
                         font-size: 1.2rem;
                         font-weight: 700;
                     }
@@ -221,52 +355,64 @@ html,body{
         }
     }
 }
-.view5{
+
+.view5 {
     width: 100%;
     @include flexBox(0rem);
     flex-direction: column;
     padding: 2rem;
-    .view5-main{
+
+    .view5-main {
         width: 100%;
         @include flexBox(0rem);
         flex-direction: column;
-        .view5-img{
+
+        .view5-img {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
-        .view5-info{
+
+        .view5-info {
             width: 100%;
             @include flexBox(2rem);
             flex-direction: column;
-            .view5-heading{
+
+            .view5-heading {
                 @include flexBox(1rem);
                 flex-direction: column;
-                p{
+
+                p {
                     font-size: 1.5rem;
                 }
-                h3{
+
+                h3 {
                     font-size: 2rem;
                 }
             }
-            .view5-paragraph{
+
+            .view5-paragraph {
                 @include flexBox(3rem);
                 flex-direction: column;
                 font-size: 1.5rem;
-                .view5-btn{
+
+                .view5-btn {
                     @include flexBox(2rem);
                     flex-direction: row;
                     align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
+
+                    button {
+                        padding: 0.8rem 2rem;
                         font-size: 1rem;
                         background-color: rgb(76, 159, 255);
                         color: white;
-                        border:none;
+                        border: none;
                         border-radius: 2rem;
                     }
-                    p{
+
+                    p {
                         font-size: 1.2rem;
                         font-weight: 700;
                     }
@@ -275,7 +421,8 @@ html,body{
         }
     }
 }
-.view6{
+
+.view6 {
     width: 100%;
     @include flexBox(0rem);
     flex-direction: column;
@@ -283,52 +430,61 @@ html,body{
     justify-content: center;
     background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
 
-    .view6-main{
+    .view6-main {
         width: 100%;
         @include flexBox(5rem);
         flex-direction: column;
         align-items: center;
-        
-        .view6-img{
+
+        .view6-img {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
-        .view6-info{
+
+        .view6-info {
             width: 100%;
             @include flexBox(2rem);
             flex-direction: column;
-            .view6-heading{
+
+            .view6-heading {
                 @include flexBox(0.5rem);
                 flex-direction: column;
-                p{
+
+                p {
                     font-size: 1.2rem;
                     font-weight: 600;
-                    
+
                 }
-                h3{
+
+                h3 {
                     font-size: 3.5rem;
                     line-height: 4rem
                 }
             }
-            .view6-paragraph{
+
+            .view6-paragraph {
                 @include flexBox(2rem);
                 flex-direction: column;
                 font-size: 1.2rem;
-                .view6-btn{
+
+                .view6-btn {
                     @include flexBox(2rem);
                     flex-direction: row;
                     align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
+
+                    button {
+                        padding: 0.8rem 2rem;
                         font-size: 1rem;
                         background-color: rgb(76, 159, 255);
                         color: white;
-                        border:none;
+                        border: none;
                         border-radius: 2rem;
                     }
-                    p{
+
+                    p {
                         font-size: 1rem;
                         font-weight: 700;
                     }
@@ -337,428 +493,499 @@ html,body{
         }
     }
 }
-.view7{
+
+.view7 {
     width: 100%;
     @include flexBox(0rem);
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    .blue-box{
-       color: white;
-       width: 70%;
-       background-color: rgb(0, 0, 78);
-       background-image:url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png") ;
-       background-position: top right; 
-       background-size: cover; 
-       background-repeat: no-repeat;
 
-       padding:5rem ;
-       border-radius: 1rem;
-       display: flex;
-       flex-direction: column;
-       gap: 1.5rem;
-       h1{
-        font-size: 3.5rem;
-       }
-       p{
-        font-size: 1.5rem;
-       }
-    .blue-btn{
+    .blue-box {
+        color: white;
+        width: 70%;
+        background-color: rgb(0, 0, 78);
+        background-image: url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png");
+        background-position: top right;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        padding: 5rem;
+        border-radius: 1rem;
         display: flex;
-        padding: 1rem;
-        gap: 3rem;
-        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
 
-        button{
-            padding: 0.8rem 2.5rem;
-            font-size: 1.2rem;
-            border-radius: 2rem;
-            color: blue;
+        h1 {
+            font-size: 3.5rem;
         }
-        p{
+
+        p {
             font-size: 1.5rem;
-            font-weight: 600;
         }
-    }
+
+        .blue-btn {
+            display: flex;
+            padding: 1rem;
+            gap: 3rem;
+            align-items: center;
+
+            button {
+                padding: 0.8rem 2.5rem;
+                font-size: 1.2rem;
+                border-radius: 2rem;
+                color: blue;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
     }
 }
 
 @media (max-width:1092px) {
-    .nav{
-     .navbar{
-        .nav-options{
-            display: none;
+    .menu {
+        display: flex; // show on mobile
+    }
+
+    .nav {
+        .navbar {
+            .nav-options {
+                display: none;
+            }
+
         }
-     }
-     }
+    }
 }
 
 @media (min-width:900px) {
-    .view1{
-    width: 100%;
-    padding: 2rem;
-    @include flexBox(5rem);
-    
-    
-    background: linear-gradient(
-    to top right,
-    rgba(255, 69, 69, 0.327) 10%,
-    white 40%,
-    white 100%
-);
-    .view1-heading{
-        @include flexBox(3rem);
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 35%;
-        }
-        h1{
-            text-align: start;
-            font-size: 3rem;
-            width: 30%;
-            line-height: 50px;
-        }
-    }
-    .view1-paragraph{
-        display: flex;
-        justify-content: center;
-        h2{
-            width: 50%;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-    }
-}
-    .view2{
-    width: 90%;
-    margin: auto;
-    @include flexBox(4rem);
-    flex-direction: row;
-    padding: 5rem 2rem;
-}
-    .view3{
-    width: 100%;
-    @include flexBox(0rem);
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-    .view3-main{
-        width: 80%;
-        @include flexBox(10rem);
-        flex-direction: row-reverse;
-        align-items: center;
-        .view3-img{
-            width: 50%;
-            img{
-                width: 80%;
-            }
-        }
-        .view3-info{
-            width: 45%;
-            @include flexBox(2rem);
-            flex-direction: column;
-            .view3-heading{
-                @include flexBox(0.5rem);
-                flex-direction: column;
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    
-                }
-                h3{
-                    font-size: 3rem;
-                }
-            }
-            .view3-paragraph{
-                @include flexBox(3rem);
-                flex-direction: column;
-                font-size: 1.2rem;
-                .view3-btn{
-                    @include flexBox(2rem);
-                    flex-direction: row;
-                    align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
-                        font-size: 1rem;
-                        color: rgb(76, 159, 255);
-                        border:1px solid rgb(76, 159, 255);
-                        border-radius: 2rem;
-                        background-color: transparent;
-                    }
-                    p{
-                        font-size: 1rem;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-    }
-}
-    .view4{
-    width: 100%;
-    @include flexBox(0rem);
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-    .view4-main{
-        width: 80%;
+    .view1 {
+        width: 100%;
+        padding: 2rem;
         @include flexBox(5rem);
+
+
+        background: linear-gradient(to top right,
+                rgba(255, 69, 69, 0.327) 10%,
+                white 40%,
+                white 100%);
+
+        .view1-heading {
+            @include flexBox(3rem);
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 35%;
+            }
+
+            h1 {
+                text-align: start;
+                font-size: 3rem;
+                width: 30%;
+                line-height: 50px;
+            }
+        }
+
+        .view1-paragraph {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+                width: 50%;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .view2 {
+        width: 90%;
+        margin: auto;
+        @include flexBox(4rem);
         flex-direction: row;
-        align-items: center;
-        .view4-img{
-            width: 50%;
-            img{
-                width: 80%;
-            }
-        }
-        .view4-info{
-            width: 40%;
-            @include flexBox(2rem);
-            flex-direction: column;
-            .view4-heading{
-                @include flexBox(0.5rem);
-                flex-direction: column;
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    
-                }
-                h3{
-                    font-size: 3.5rem;
-                    line-height: 4rem
-                }
-            }
-            .view4-paragraph{
-                @include flexBox(2rem);
-                flex-direction: column;
-                font-size: 1.2rem;
-                .view4-btn{
-                    @include flexBox(2rem);
-                    flex-direction: row;
-                    align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
-                        font-size: 1rem;
-                        background-color: rgb(76, 159, 255);
-                        color: white;
-                        border:none;
-                        border-radius: 2rem;
-                    }
-                    p{
-                        font-size: 1rem;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
+        padding: 5rem 2rem;
     }
-}
 
-    .view5{
-    width: 100%;
-    @include flexBox(0rem);
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-    .view5-main{
-        width: 80%;
-        @include flexBox(5rem);
-        flex-direction: row-reverse;
-        align-items: center;
-        .view5-img{
-            width: 50%;
-            img{
-                width: 80%;
-            }
-        }
-        .view5-info{
-            width: 40%;
-            @include flexBox(2rem);
-            flex-direction: column;
-            .view5-heading{
-                @include flexBox(0.5rem);
-                flex-direction: column;
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    
-                }
-                h3{
-                    font-size: 3.5rem;
-                    line-height: 4rem
-                }
-            }
-            .view5-paragraph{
-                @include flexBox(2rem);
-                flex-direction: column;
-                font-size: 1.2rem;
-                .view5-btn{
-                    @include flexBox(2rem);
-                    flex-direction: row;
-                    align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
-                        font-size: 1rem;
-                        color: rgb(76, 159, 255);
-                        border:1px solid rgb(76, 159, 255);
-                        border-radius: 2rem;
-                        background-color: transparent;
-                    }
-                    p{
-                        font-size: 1rem;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-    }
-}
-.view6{
-    width: 100%;
-    @include flexBox(0rem);
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-    background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
-
-    .view6-main{
-        width: 80%;
-        @include flexBox(5rem);
+    .view3 {
+        width: 100%;
+        @include flexBox(0rem);
         flex-direction: row;
-        align-items: center;
-        .view6-img{
-            width: 50%;
-            img{
-                width: 80%;
-            }
-        }
-        .view6-info{
-            width: 40%;
-            @include flexBox(2rem);
-            flex-direction: column;
-            .view6-heading{
-                @include flexBox(0.5rem);
-                flex-direction: column;
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    
-                }
-                h3{
-                    font-size: 3.5rem;
-                    line-height: 4rem
+        padding: 2rem;
+        justify-content: center;
+
+        .view3-main {
+            width: 80%;
+            @include flexBox(10rem);
+            flex-direction: row-reverse;
+            align-items: center;
+
+            .view3-img {
+                width: 50%;
+
+                img {
+                    width: 80%;
                 }
             }
-            .view6-paragraph{
+
+            .view3-info {
+                width: 45%;
                 @include flexBox(2rem);
                 flex-direction: column;
-                font-size: 1.2rem;
-                .view6-btn{
-                    @include flexBox(2rem);
-                    flex-direction: row;
-                    align-items: center;
-                    button{
-                        padding: 0.8rem 2rem ;
-                        font-size: 1rem;
-                        background-color: rgb(76, 159, 255);
-                        color: white;
-                        border:none;
-                        border-radius: 2rem;
+
+                .view3-heading {
+                    @include flexBox(0.5rem);
+                    flex-direction: column;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
                     }
-                    p{
-                        font-size: 1rem;
-                        font-weight: 700;
+
+                    h3 {
+                        font-size: 3rem;
+                    }
+                }
+
+                .view3-paragraph {
+                    @include flexBox(3rem);
+                    flex-direction: column;
+                    font-size: 1.2rem;
+
+                    .view3-btn {
+                        @include flexBox(2rem);
+                        flex-direction: row;
+                        align-items: center;
+
+                        button {
+                            padding: 0.8rem 2rem;
+                            font-size: 1rem;
+                            color: rgb(76, 159, 255);
+                            border: 1px solid rgb(76, 159, 255);
+                            border-radius: 2rem;
+                            background-color: transparent;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
                     }
                 }
             }
         }
     }
-}
-.view7{
-    width: 100%;
-    @include flexBox(0rem);
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    .blue-box{
-       color: white;
-       width: 70%;
-       background-color: rgb(0, 0, 78);
-       background-image:url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png") ;
-       background-position: top right; 
-       background-size: cover; 
-       background-repeat: no-repeat;
 
-       padding:3rem ;
-       border-radius: 1rem;
-       display: flex;
-       flex-direction: column;
-       gap: 1.5rem;
-       h1{
-        font-size: 3.5rem;
-       }
-       p{
-        font-size: 1.2rem;
-       }
-    .blue-btn{
-        display: flex;
-        padding: 1rem;
-        gap: 3rem;
+    .view4 {
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: center;
+
+        .view4-main {
+            width: 80%;
+            @include flexBox(5rem);
+            flex-direction: row;
+            align-items: center;
+
+            .view4-img {
+                width: 50%;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .view4-info {
+                width: 40%;
+                @include flexBox(2rem);
+                flex-direction: column;
+
+                .view4-heading {
+                    @include flexBox(0.5rem);
+                    flex-direction: column;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
+                    }
+
+                    h3 {
+                        font-size: 3.5rem;
+                        line-height: 4rem
+                    }
+                }
+
+                .view4-paragraph {
+                    @include flexBox(2rem);
+                    flex-direction: column;
+                    font-size: 1.2rem;
+
+                    .view4-btn {
+                        @include flexBox(2rem);
+                        flex-direction: row;
+                        align-items: center;
+
+                        button {
+                            padding: 0.8rem 2rem;
+                            font-size: 1rem;
+                            background-color: rgb(76, 159, 255);
+                            color: white;
+                            border: none;
+                            border-radius: 2rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .view5 {
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: center;
+
+        .view5-main {
+            width: 80%;
+            @include flexBox(5rem);
+            flex-direction: row-reverse;
+            align-items: center;
+
+            .view5-img {
+                width: 50%;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .view5-info {
+                width: 40%;
+                @include flexBox(2rem);
+                flex-direction: column;
+
+                .view5-heading {
+                    @include flexBox(0.5rem);
+                    flex-direction: column;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
+                    }
+
+                    h3 {
+                        font-size: 3.5rem;
+                        line-height: 4rem
+                    }
+                }
+
+                .view5-paragraph {
+                    @include flexBox(2rem);
+                    flex-direction: column;
+                    font-size: 1.2rem;
+
+                    .view5-btn {
+                        @include flexBox(2rem);
+                        flex-direction: row;
+                        align-items: center;
+
+                        button {
+                            padding: 0.8rem 2rem;
+                            font-size: 1rem;
+                            color: rgb(76, 159, 255);
+                            border: 1px solid rgb(76, 159, 255);
+                            border-radius: 2rem;
+                            background-color: transparent;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .view6 {
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: center;
+        background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+
+        .view6-main {
+            width: 80%;
+            @include flexBox(5rem);
+            flex-direction: row;
+            align-items: center;
+
+            .view6-img {
+                width: 50%;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .view6-info {
+                width: 40%;
+                @include flexBox(2rem);
+                flex-direction: column;
+
+                .view6-heading {
+                    @include flexBox(0.5rem);
+                    flex-direction: column;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
+                    }
+
+                    h3 {
+                        font-size: 3.5rem;
+                        line-height: 4rem
+                    }
+                }
+
+                .view6-paragraph {
+                    @include flexBox(2rem);
+                    flex-direction: column;
+                    font-size: 1.2rem;
+
+                    .view6-btn {
+                        @include flexBox(2rem);
+                        flex-direction: row;
+                        align-items: center;
+
+                        button {
+                            padding: 0.8rem 2rem;
+                            font-size: 1rem;
+                            background-color: rgb(76, 159, 255);
+                            color: white;
+                            border: none;
+                            border-radius: 2rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .view7 {
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: column;
         align-items: center;
+        padding: 2rem;
 
-        button{
-            padding: 0.8rem 2.5rem;
-            font-size: 1.2rem;
-            border-radius: 2rem;
-            color: blue;
-        }
-        p{
-            font-size: 1.2rem;
-            font-weight: 600;
+        .blue-box {
+            color: white;
+            width: 70%;
+            background-color: rgb(0, 0, 78);
+            background-image: url("https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png");
+            background-position: top right;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            padding: 3rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .blue-btn {
+                display: flex;
+                padding: 1rem;
+                gap: 3rem;
+                align-items: center;
+
+                button {
+                    padding: 0.8rem 2.5rem;
+                    font-size: 1.2rem;
+                    border-radius: 2rem;
+                    color: blue;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
         }
     }
-    }
-}
+
 }
 
 @media (min-width:1013px) {
-     .view1{
-    width: 100%;
-    padding: 2rem;
-    @include flexBox(5rem);
-    
-    
-    background: linear-gradient(
-    to top right,
-    rgba(255, 69, 69, 0.327) 10%,
-    white 40%,
-    white 100%
-);
-    .view1-heading{
-        @include flexBox(3rem);
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 35%;
+    .view1 {
+        width: 100%;
+        padding: 2rem;
+        @include flexBox(5rem);
+
+
+        background: linear-gradient(to top right,
+                rgba(255, 69, 69, 0.327) 10%,
+                white 40%,
+                white 100%);
+
+        .view1-heading {
+            @include flexBox(3rem);
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 35%;
+            }
+
+            h1 {
+                text-align: start;
+                font-size: 4rem;
+                width: 30%;
+                line-height: 70px;
+            }
         }
-        h1{
-            text-align: start;
-            font-size: 4rem;
-            width: 30%;
-            line-height: 70px;
+
+        .view1-paragraph {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+                width: 50%;
+                font-size: 1rem;
+                font-weight: 500;
+            }
         }
     }
-    .view1-paragraph{
-        display: flex;
-        justify-content: center;
-        h2{
-            width: 50%;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-    }
-}
 }
