@@ -244,6 +244,159 @@ html, body {
   font-weight: 700;
 }
 
+.view5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+.view5 .view5-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+}
+.view5 .view5-main .view5-img {
+  width: 100%;
+}
+.view5 .view5-main .view5-img img {
+  width: 100%;
+}
+.view5 .view5-main .view5-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: column;
+}
+.view5 .view5-main .view5-info .view5-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: column;
+}
+.view5 .view5-main .view5-info .view5-heading p {
+  font-size: 1.5rem;
+}
+.view5 .view5-main .view5-info .view5-heading h3 {
+  font-size: 2rem;
+}
+.view5 .view5-main .view5-info .view5-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.view5 .view5-main .view5-info .view5-paragraph .view5-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.view5 .view5-main .view5-info .view5-paragraph .view5-btn button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: rgb(76, 159, 255);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+.view5 .view5-main .view5-info .view5-paragraph .view5-btn p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.view6 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+}
+.view6 .view6-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.view6 .view6-main .view6-img {
+  width: 100%;
+}
+.view6 .view6-main .view6-img img {
+  width: 100%;
+}
+.view6 .view6-main .view6-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: column;
+}
+.view6 .view6-main .view6-info .view6-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.view6 .view6-main .view6-info .view6-heading p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.view6 .view6-main .view6-info .view6-heading h3 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+.view6 .view6-main .view6-info .view6-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.view6 .view6-main .view6-info .view6-paragraph .view6-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.view6 .view6-main .view6-info .view6-paragraph .view6-btn button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: rgb(76, 159, 255);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+.view6 .view6-main .view6-info .view6-paragraph .view6-btn p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.view7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.view7 .blue-box {
+  color: white;
+  background-color: rgb(0, 0, 78);
+}
+
 @media (max-width: 1092px) {
   .nav .navbar .nav-options {
     display: none;
@@ -285,7 +438,7 @@ html, body {
     font-weight: 500;
   }
   .view2 {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -353,10 +506,10 @@ html, body {
   .view3 .view3-main .view3-info .view3-paragraph .view3-btn button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    background-color: transparent;
-    border: 1px solid blue;
-    color: blue;
+    color: rgb(76, 159, 255);
+    border: 1px solid rgb(76, 159, 255);
     border-radius: 2rem;
+    background-color: transparent;
   }
   .view3 .view3-main .view3-info .view3-paragraph .view3-btn p {
     font-size: 1rem;
@@ -429,6 +582,147 @@ html, body {
     border-radius: 2rem;
   }
   .view4 .view4-main .view4-info .view4-paragraph .view4-btn p {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .view5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+  }
+  .view5 .view5-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .view5 .view5-main .view5-img {
+    width: 50%;
+  }
+  .view5 .view5-main .view5-img img {
+    width: 80%;
+  }
+  .view5 .view5-main .view5-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .view5 .view5-main .view5-info .view5-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .view5 .view5-main .view5-info .view5-heading p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .view5 .view5-main .view5-info .view5-heading h3 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .view5 .view5-main .view5-info .view5-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .view5 .view5-main .view5-info .view5-paragraph .view5-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view5 .view5-main .view5-info .view5-paragraph .view5-btn button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: rgb(76, 159, 255);
+    border: 1px solid rgb(76, 159, 255);
+    border-radius: 2rem;
+    background-color: transparent;
+  }
+  .view5 .view5-main .view5-info .view5-paragraph .view5-btn p {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .view6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+  }
+  .view6 .view6-main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view6 .view6-main .view6-img {
+    width: 50%;
+  }
+  .view6 .view6-main .view6-img img {
+    width: 80%;
+  }
+  .view6 .view6-main .view6-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .view6 .view6-main .view6-info .view6-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .view6 .view6-main .view6-info .view6-heading p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .view6 .view6-main .view6-info .view6-heading h3 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .view6 .view6-main .view6-info .view6-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .view6 .view6-main .view6-info .view6-paragraph .view6-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view6 .view6-main .view6-info .view6-paragraph .view6-btn button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: rgb(76, 159, 255);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+  }
+  .view6 .view6-main .view6-info .view6-paragraph .view6-btn p {
     font-size: 1rem;
     font-weight: 700;
   }

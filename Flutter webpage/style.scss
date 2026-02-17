@@ -16,6 +16,8 @@ html,body{
     gap: $gap;
 }
 
+
+
 .nav{
     width: 100%;
     display: flex;
@@ -219,6 +221,134 @@ html,body{
         }
     }
 }
+.view5{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: column;
+    padding: 2rem;
+    .view5-main{
+        width: 100%;
+        @include flexBox(0rem);
+        flex-direction: column;
+        .view5-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .view5-info{
+            width: 100%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view5-heading{
+                @include flexBox(1rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 2rem;
+                }
+            }
+            .view5-paragraph{
+                @include flexBox(3rem);
+                flex-direction: column;
+                font-size: 1.5rem;
+                .view5-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: rgb(76, 159, 255);
+                        color: white;
+                        border:none;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+.view6{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+
+    .view6-main{
+        width: 100%;
+        @include flexBox(5rem);
+        flex-direction: column;
+        align-items: center;
+        
+        .view6-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .view6-info{
+            width: 100%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view6-heading{
+                @include flexBox(0.5rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    
+                }
+                h3{
+                    font-size: 3.5rem;
+                    line-height: 4rem
+                }
+            }
+            .view6-paragraph{
+                @include flexBox(2rem);
+                flex-direction: column;
+                font-size: 1.2rem;
+                .view6-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: rgb(76, 159, 255);
+                        color: white;
+                        border:none;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+.view7{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    .blue-box{
+        color: white;
+       background-color: rgb(0, 0, 78);
+
+    }
+}
 
 @media (max-width:1092px) {
     .nav{
@@ -269,7 +399,7 @@ html,body{
     }
 }
     .view2{
-    width: 80%;
+    width: 90%;
     margin: auto;
     @include flexBox(4rem);
     flex-direction: row;
@@ -319,10 +449,10 @@ html,body{
                     button{
                         padding: 0.8rem 2rem ;
                         font-size: 1rem;
-                        background-color: transparent;
-                        border: 1px solid blue;
-                        color: blue;
+                        color: rgb(76, 159, 255);
+                        border:1px solid rgb(76, 159, 255);
                         border-radius: 2rem;
+                        background-color: transparent;
                     }
                     p{
                         font-size: 1rem;
@@ -393,6 +523,126 @@ html,body{
     }
 }
 
+    .view5{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    .view5-main{
+        width: 80%;
+        @include flexBox(5rem);
+        flex-direction: row-reverse;
+        align-items: center;
+        .view5-img{
+            width: 50%;
+            img{
+                width: 80%;
+            }
+        }
+        .view5-info{
+            width: 40%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view5-heading{
+                @include flexBox(0.5rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    
+                }
+                h3{
+                    font-size: 3.5rem;
+                    line-height: 4rem
+                }
+            }
+            .view5-paragraph{
+                @include flexBox(2rem);
+                flex-direction: column;
+                font-size: 1.2rem;
+                .view5-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        color: rgb(76, 159, 255);
+                        border:1px solid rgb(76, 159, 255);
+                        border-radius: 2rem;
+                        background-color: transparent;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+.view6{
+    width: 100%;
+    @include flexBox(0rem);
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    background: linear-gradient(to top right, rgba(254, 254, 179, 0.715), white);
+
+    .view6-main{
+        width: 80%;
+        @include flexBox(5rem);
+        flex-direction: row;
+        align-items: center;
+        .view6-img{
+            width: 50%;
+            img{
+                width: 80%;
+            }
+        }
+        .view6-info{
+            width: 40%;
+            @include flexBox(2rem);
+            flex-direction: column;
+            .view6-heading{
+                @include flexBox(0.5rem);
+                flex-direction: column;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    
+                }
+                h3{
+                    font-size: 3.5rem;
+                    line-height: 4rem
+                }
+            }
+            .view6-paragraph{
+                @include flexBox(2rem);
+                flex-direction: column;
+                font-size: 1.2rem;
+                .view6-btn{
+                    @include flexBox(2rem);
+                    flex-direction: row;
+                    align-items: center;
+                    button{
+                        padding: 0.8rem 2rem ;
+                        font-size: 1rem;
+                        background-color: rgb(76, 159, 255);
+                        color: white;
+                        border:none;
+                        border-radius: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
 }
 
 @media (min-width:1013px) {
