@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main .nav {
+  display: flex;
+  gap: 0;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .nav .nav-img {
+  width: 3rem;
+}
+.main .nav .nav-img img {
+  width: 100%;
+}
+.main .nav .nav-option {
+  display: flex;
+  gap: 0;
+  gap: 2rem;
+}
+.main .nav .nav-logo {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.main .nav .nav-option.hide {
+  display: none;
+}
+.main {
+  /* Icon 1 */
+}
+.main #nav-icon1,
+.main #nav-icon2,
+.main #nav-icon3,
+.main #nav-icon4 {
+  display: none;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.main #nav-icon1 span,
+.main #nav-icon3 span,
+.main #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #484848;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.main #nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+.main #nav-icon1 span:nth-child(2) {
+  top: 18px;
+}
+.main #nav-icon1 span:nth-child(3) {
+  top: 36px;
+}
+.main #nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+.main #nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+.main #nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+.main .main-bread {
+  display: flex;
+  padding: 0rem 2rem;
+  justify-content: space-between;
+}
+.main .main-bread .breadcrumb {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+.main .main-bread .breadcrumb a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.main .main-bread .breadcrumb i {
+  font-size: 30px;
+  font-weight: 10;
+}
+.main .main-bread .bread-heading {
+  padding: 0rem 2rem;
+}
+.main .main-bread .bread-sort {
+  margin-top: 4.5rem;
+}
+.main .main-products {
+  display: flex;
+  margin-top: 30px;
+}
+.main .main-products .product1 {
+  width: 30%;
+  padding: 0rem 2rem;
+}
+.main .main-products .product1 div {
+  width: 80%;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+.main .main-products .product1 div h3 {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.main .main-products .product1 hr {
+  width: 25rem;
+  margin-left: 28px;
+}
+.main .main-products .product2 {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main .main-products .product2 .main-project {
+  width: 30%;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.main .main-products .product2 .main-project .project2-cart {
+  position: absolute;
+  top: 130px;
+  right: 105px;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(127, 47, 47);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.main .main-products .product2 .main-project .project2-cart i {
+  color: white;
+  font-size: 30px;
+}
+.main .main-products .product2 .main-project:hover .project2-cart {
+  opacity: 1;
+}
+.main .main-products .product2 .main-project .project2-img {
+  width: 100%;
+  transition: 0.3s ease;
+}
+.main .main-products .product2 .main-project .project2-img img {
+  width: 100%;
+}
+.main .main-products .product2 .main-project:hover .project2-img img {
+  filter: blur(3px);
+}
+.main .main-products .product2 .main-project .project2-para {
+  line-height: 1.9rem;
+}
+
+@media (max-width: 605px) {
+  .main .nav .nav-option {
+    display: none;
+  }
+  .main .nav .nav-option.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    gap: 25px;
+  }
+  .main #nav-icon1 {
+    display: block;
+  }
+}
+@media (max-width: 1569px) {
+  .main-products {
+    display: flex;
+    justify-content: center;
+  }
+  .main-products .product1 {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
