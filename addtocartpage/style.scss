@@ -245,12 +245,113 @@ body {
   }
 }
 
-@media (max-width: 1569px) {
-  .main-products {
-    display: flex;
-    justify-content: center;
-    .product1 {
-      display: none;
+@media (max-width: 1576px) {
+  .main {
+    .main-products {
+      display: flex;
+      justify-content: center;
+
+      .product1 {
+        width: 25%;
+        padding: 0rem 4rem;
+
+        div {
+          width: 100%;
+          font-size: 15px;
+          padding: 1rem 2rem;
+          text-align: left;
+
+          h3 {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        hr {
+          width: 15rem;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1380px) {
+  .main {
+    .main-products {
+      display: flex;
+      justify-content: center;
+
+      .product1 {
+        width: 30%;
+        padding: 0rem 4rem;
+
+        div {
+          width: 100%;
+          font-size: 15px;
+          padding: 1rem 2rem;
+          text-align: left;
+
+          h3 {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        hr {
+          width: 15rem;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1175px) {
+  .main {
+    .main-products {
+      display: flex;
+      justify-content: center;
+
+      .product1 {
+        width: 30%;
+        padding: 0rem 5rem;
+
+        div {
+          width: 100%;
+          font-size: 10px;
+          padding: 1rem 2rem;
+          text-align: left;
+
+          h3 {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        hr {
+          width: 11rem;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 956px) {
+  .main {
+    .main-products {
+      display: flex;
+      justify-content: center;
+
+      .product1 {
+        display: none;
+      }
     }
   }
 }
