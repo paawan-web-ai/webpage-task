@@ -1,0 +1,65 @@
+@mixin flex-box($gap) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+main {
+  @include flex-box(0);
+  width: 100vw;
+  height: 100vh;
+
+  .form-container {
+    @include flex-box(1.5rem);
+    flex-direction: column;
+    align-items: start;
+    background-color: #fff;
+    padding-block: 4rem;
+    padding-inline: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    h1 {
+      font-size: 40px;
+      color: rgb(69, 2, 2);
+    }
+    p {
+      text-align: center;
+      font-size: 16px;
+      width: 100%;
+      a {
+        text-decoration: none;
+        color: rgb(162, 2, 2);
+        font-weight: bold;
+      }
+    }
+    form {
+      @include flex-box(1rem);
+      flex-direction: column;
+      input {
+        width: 25rem;
+        height: 3.6rem;
+        padding: 1rem;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.456);
+        font-weight: bold;
+      }
+
+      button {
+        width: 25rem;
+        height: 3rem;
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(162, 2, 2);
+        cursor: pointer;
+      }
+      button:active {
+        background-color: rgb(85, 2, 2);
+        scale: 0.9;
+      }
+    }
+  }
+}
