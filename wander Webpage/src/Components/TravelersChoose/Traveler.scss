@@ -189,7 +189,18 @@
 
     .right-main {
       .card-main {
-        width: 470px;
+        width: 570px;
+        padding-inline: 1rem;
+        padding-block: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 583px) {
+  .traveler-main {
+    .right-main {
+      .card-main {
+        width: 400px;
         padding-inline: 1rem;
         padding-block: 1rem;
       }
