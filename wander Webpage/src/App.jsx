@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Header from "./Components/Header/Header";
 import Traveler from "./Components/TravelersChoose/Traveler";
+import DestinationCard from "./Components/DestinationsCard/DestinationCard";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <Header />
       <Traveler />
+      <DestinationCard />
     </div>
   );
 };

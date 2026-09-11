@@ -1,0 +1,97 @@
+.main-background {
+  margin: auto;
+  width: 80%;
+  background-color: rgb(219, 218, 218);
+  border-radius: 10px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .background-heading {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      font-size: clamp(15px, 2vw, 36px);
+    }
+    p {
+      font-size: clamp(2px, 1.5vw, 19px);
+      width: 50%;
+    }
+  }
+
+  .card-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .main-card {
+      width: 248px;
+      .card-img {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        .card-rate {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          background: rgba(255, 255, 255, 0.5);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          padding: 6px 10px;
+          border-radius: 20px;
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        img {
+          width: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .card-para {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        color: white;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+
+        h3,
+        p {
+          margin: 0.25rem 0;
+        }
+      }
+    }
+  }
+
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding-inline: 25px;
+      height: 47px;
+      background-color: rgb(15, 15, 76);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+    }
+  }
+  .button-icons {
+    i {
+      font-size: 50px;
+    }
+  }
+}

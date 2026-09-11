@@ -8,6 +8,7 @@
   width: 100%;
   @include flexbox(5rem);
   margin-top: 70px;
+  margin-bottom: 100px;
 
   .left-main {
     width: 35%;
@@ -188,21 +189,81 @@
     }
 
     .right-main {
+      width: 100%;
+      align-items: center;
+
       .card-main {
-        width: 570px;
+        width: min(90%, 570px);
+        box-sizing: border-box;
         padding-inline: 1rem;
         padding-block: 1rem;
       }
     }
   }
 }
-@media (max-width: 583px) {
+
+@media (max-width: 407px) {
   .traveler-main {
+    .left-main {
+      .left-upper {
+        h3 {
+          font-size: 20px;
+        }
+        .left-upper-logo {
+          gap: 0.5rem;
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+      .left-bottom {
+        flex-direction: column;
+        align-items: center;
+        .left-main-bottom {
+          width: 70%;
+          gap: 2px;
+          .emoji {
+            i {
+              font-size: 70px;
+            }
+          }
+          .emoji-para {
+            h3 {
+              font-size: 54px;
+            }
+            p {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
     .right-main {
+      width: 100%;
+      align-items: center;
+
       .card-main {
-        width: 400px;
+        width: min(90%, 280px);
+        height: auto;
+        min-height: 300px;
+        box-sizing: border-box;
+        flex-direction: column;
         padding-inline: 1rem;
-        padding-block: 1rem;
+
+        .image-card {
+          width: 100%;
+          height: 100px;
+          img {
+            border-radius: 10px;
+            width: 100%;
+          }
+        }
+        .image-para {
+          h2 {
+            margin-bottom: 12px;
+          }
+        }
       }
     }
   }
