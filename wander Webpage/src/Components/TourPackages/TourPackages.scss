@@ -1,0 +1,146 @@
+.packages-box {
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  .main-packages {
+    width: min(78%, 1200px);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 20px;
+    box-sizing: border-box;
+
+    .tour-packages {
+      background-color: rgb(171, 171, 238);
+      width: 100%;
+      min-width: 0;
+      height: 300px;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      border-radius: 10px;
+      .tour-header {
+        color: white;
+        font-size: clamp(10px, 2vw, 20px);
+      }
+      button {
+        background-color: rgb(32, 32, 67);
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 20px;
+      }
+    }
+
+    .island-card {
+      width: 100%;
+      min-width: 0;
+      height: 300px;
+      position: relative;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      .island-img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .upper-header {
+        position: absolute;
+        top: 90px;
+        left: 22px;
+        width: 200px;
+      }
+      .bottom-para {
+        position: absolute;
+        width: 220px;
+        bottom: 20px;
+        left: 22px;
+        font-size: clamp(10px, 2vw, 14px);
+      }
+    }
+
+    .northern-card {
+      width: 100%;
+      min-width: 0;
+      height: 300px;
+      position: relative;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      .island-img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .upper-header {
+        position: absolute;
+        top: 90px;
+        left: 22px;
+        width: 200px;
+      }
+      .bottom-para {
+        position: absolute;
+        width: 220px;
+        bottom: 20px;
+        left: 22px;
+        font-size: clamp(10px, 2vw, 14px);
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .main-packages {
+      width: min(92%, 700px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .tour-packages {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 3rem;
+
+    .main-packages {
+      width: 100%;
+      padding: 12px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+
+      .tour-packages,
+      .island-card,
+      .northern-card {
+        grid-column: auto;
+        height: 260px;
+      }
+
+      .tour-packages {
+        padding: 20px;
+      }
+
+      .upper-header {
+        top: 70px;
+        left: 16px;
+        width: calc(100% - 32px);
+      }
+
+      .bottom-para {
+        left: 16px;
+        width: calc(100% - 32px);
+      }
+    }
+  }
+}

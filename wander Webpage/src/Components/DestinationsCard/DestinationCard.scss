@@ -1,32 +1,47 @@
 .main-background {
+  box-sizing: border-box;
   margin: auto;
-  width: 80%;
-  background-color: rgb(219, 218, 218);
+  width: min(80%, 1200px);
+  background-color: rgb(219, 219, 219);
   border-radius: 10px;
-  padding: 5rem;
+  padding: clamp(1.25rem, 5vw, 5rem);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 
   .background-heading {
     display: flex;
     justify-content: space-between;
 
     h2 {
-      font-size: clamp(15px, 2vw, 36px);
+      font-size: clamp(25px, 2vw, 36px);
     }
     p {
-      font-size: clamp(2px, 1.5vw, 19px);
+      font-size: clamp(12px, 1.5vw, 19px);
       width: 50%;
     }
   }
 
   .card-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .main-card {
+      flex: 0 0 248px;
       width: 248px;
       .card-img {
         width: 100%;
@@ -92,6 +107,24 @@
   .button-icons {
     i {
       font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 538px) {
+  .main-background {
+    gap: 20px;
+    .background-heading {
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        font-size: clamp(25px, 2vw, 36px);
+      }
+      p {
+        font-size: clamp(12px, 1.5vw, 19px);
+        width: 100%;
+      }
     }
   }
 }
